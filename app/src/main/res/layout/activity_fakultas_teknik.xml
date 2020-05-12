@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fakultas.FakultasTeknik">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/bg_home"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/bg_header"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:src="@drawable/logo_umpar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/iv_logo"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplikasi Kontak Dosen"
+        android:textSize="20sp"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_logo"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_app"
+        android:layout_marginLeft="12dp"
+
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Universitas Muhammadiyah Parepare"
+        android:textSize="15sp"
+        android:textColor="#FFFF"
+        app:layout_constraintTop_toBottomOf="@id/tv_app"
+        app:layout_constraintLeft_toRightOf="@id/iv_logo"
+        android:id="@+id/tv_umpar"
+        android:layout_marginLeft="12dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nama"
+        android:textColorHint="#FFFF"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_keyboard_voice"
+        app:endIconTint="#FFFF"
+        android:paddingLeft="64dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="64dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fakultas Teknik"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/bg_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:id="@+id/tv_keterangan_teknik"
+        />
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="327dp"
+        android:layout_height="98dp"
+        android:background="@drawable/bg_lihat"
+        app:layout_constraintTop_toBottomOf="@+id/tv_keterangan_teknik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:elevation="3dp"
+        android:id="@+id/btn_teknik_informatika"
+        android:onClick="btn_teknik_informatika"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/folder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/iv_folder_informatika"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_informatika"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teknik Informatika"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_folder_informatika"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_jumlah_teknik_informatika"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50 Kontak"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_informatika"
+            app:layout_constraintStart_toEndOf="@id/iv_folder_informatika"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/vi_lihat_teknk_informatika"
+        android:layout_width="107dp"
+        android:layout_height="33dp"
+        android:background="@drawable/bg_lihat_prodi"
+        android:elevation="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_teknik_informatika"
+        app:layout_constraintBottom_toBottomOf="@id/btn_teknik_informatika"
+        app:layout_constraintRight_toRightOf="@id/btn_teknik_informatika"
+        android:layout_marginRight="27dp"
+         />
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lihat"
+        android:textSize="16sp"
+        android:textColor="#1C9FCF"
+        android:elevation="5dp"
+        app:layout_constraintTop_toTopOf="@id/vi_lihat_teknk_informatika"
+        app:layout_constraintBottom_toBottomOf="@id/vi_lihat_teknk_informatika"
+        app:layout_constraintLeft_toLeftOf="@id/vi_lihat_teknk_informatika"
+        app:layout_constraintRight_toRightOf="@id/vi_lihat_teknk_informatika"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
