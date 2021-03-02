@@ -5,6 +5,8 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -21,7 +23,7 @@ public class InfoDosenInformatika extends AppCompatActivity {
     String nama,nbm, no_hp;
     TextView tv_nama,tv_nbm,tv_nohp;
     ImageButton btn_wa,btn_copy,btn_telpon;
-    InfoDosenInformatika context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +64,28 @@ public class InfoDosenInformatika extends AppCompatActivity {
             }
         });
 
+        btn_copy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clipData = ClipData.newPlainText("nohp",tv_nohp.getText());
+                clipboardManager.setPrimaryClip(clipData);
+
+                Toast.makeText(InfoDosenInformatika.this,"Telah dicopy...",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        btn_wa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("smsto:"+tv_nohp.getText());
+                Intent intentWa = new Intent(Intent.ACTION_SENDTO,uri);
+                intentWa.setPackage("com.whatsapp");
+                startActivity(intentWa);
+            }
+        });
+
     }
-    private void requestPermission(){
-        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},1);
-    }
+
 }

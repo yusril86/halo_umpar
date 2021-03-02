@@ -154,6 +154,7 @@
             android:background="@drawable/bg_fakultas"
             android:id="@+id/btn_ekonomi"
             android:elevation="3dp"
+            android:onClick="btn_ekonomi"
             >
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_marginTop="16dp"
@@ -226,7 +227,8 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:elevation="3dp"
-            android:id="@+id/btn_fikes"
+            android:id="@+id/btn_hukum"
+            android:onClick="btn_hukum"
             >
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_marginTop="16dp"
@@ -236,35 +238,35 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                android:id="@+id/iv_logo_fikes"
+                android:id="@+id/iv_logo_hukum"
                 />
             <View
                 android:layout_width="67dp"
                 android:layout_height="25dp"
                 android:background="@drawable/bg_lihat"
-                app:layout_constraintTop_toBottomOf="@+id/iv_logo_fikes"
+                app:layout_constraintTop_toBottomOf="@+id/iv_logo_hukum"
                 app:layout_constraintRight_toRightOf="parent"
-                android:id="@+id/vi_lihat_fikes"
+                android:id="@+id/vi_lihat_hukum"
                 />
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lihat"
-                app:layout_constraintTop_toBottomOf="@id/iv_logo_fikes"
-                app:layout_constraintLeft_toLeftOf="@id/vi_lihat_fikes"
-                app:layout_constraintRight_toRightOf="@+id/vi_lihat_fikes"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo_hukum"
+                app:layout_constraintLeft_toLeftOf="@id/vi_lihat_hukum"
+                app:layout_constraintRight_toRightOf="@+id/vi_lihat_hukum"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
        <com.google.android.material.textview.MaterialTextView
-           android:id="@+id/tv_fak_fikes"
+           android:id="@+id/tv_fak_hukum"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="Fakultas Ilmu Kesehatan"
+           android:text="Fakultas Hukum"
            android:textSize="16sp"
            android:layout_marginRight="19dp"
            android:layout_marginTop="16dp"
-           app:layout_constraintTop_toBottomOf="@+id/btn_fikes"
-           app:layout_constraintLeft_toLeftOf="@+id/btn_fikes"
+           app:layout_constraintTop_toBottomOf="@+id/btn_hukum"
+           app:layout_constraintLeft_toLeftOf="@+id/btn_hukum"
            />
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="21dp"
@@ -272,19 +274,19 @@
             android:src="@drawable/social"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="24dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_fak_fikes"
-            app:layout_constraintLeft_toLeftOf="@id/btn_fikes"
-            android:id="@+id/iv_jumlah_fikes"
+            app:layout_constraintTop_toBottomOf="@id/tv_fak_hukum"
+            app:layout_constraintLeft_toLeftOf="@id/btn_hukum"
+            android:id="@+id/iv_jumlah_hukum"
             />
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_jumlah_fikes"
+            android:id="@+id/tv_jumlah_hukum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="230"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_fak_fikes"
-            app:layout_constraintLeft_toRightOf="@+id/iv_jumlah_fikes"
+            app:layout_constraintTop_toBottomOf="@id/tv_fak_hukum"
+            app:layout_constraintLeft_toRightOf="@+id/iv_jumlah_hukum"
             />
 
 
@@ -293,12 +295,13 @@
             android:layout_height="195dp"
             app:layout_constraintTop_toBottomOf="@id/tv_jumlah_ekonomi"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn_fikes"
+            app:layout_constraintStart_toEndOf="@id/btn_hukum"
             android:background="@drawable/bg_fakultas"
             android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
             android:elevation="3dp"
             android:id="@+id/btn_fapetrik"
+            android:onClick="btn_pertanian"
             >
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_marginTop="16dp"

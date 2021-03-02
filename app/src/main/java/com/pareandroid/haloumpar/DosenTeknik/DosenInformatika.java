@@ -1,4 +1,4 @@
-package com.pareandroid.haloumpar.Dosen;
+package com.pareandroid.haloumpar.DosenTeknik;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

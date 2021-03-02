@@ -3,7 +3,7 @@
     package="com.pareandroid.haloumpar">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -12,8 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InfoDosenInformatika"></activity>
-        <activity android:name=".Dosen.DosenInformatika" />
+        <activity android:name=".DosenTeknik.DosenElektro"></activity>
+        <activity android:name=".DosenTeknik.DosenSipil" />
+        <activity android:name=".InfoDosenInformatika" />
+        <activity android:name=".DosenTeknik.DosenInformatika" />
         <activity android:name=".Fakultas.FakultasTeknik" />
         <activity android:name=".MainActivity">
             <intent-filter>
